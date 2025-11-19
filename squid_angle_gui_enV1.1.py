@@ -8,7 +8,7 @@ from pathlib import Path
 class SquidAngleGUI:
     def __init__(self, master):
         self.master = master
-        master.title("Squid Attitude & Acoustic Incidence Angle Calculator © Tong 2025")
+        master.title("Squid Attitude & Acoustic Incidence Angle Calculator V1.1 © Tong 2025")
         master.geometry("1000x750")
 
         # --- Main Frames ---
@@ -111,7 +111,7 @@ class SquidAngleGUI:
         for name, vec in beam_vectors.items():
             dot_product = np.clip(np.dot(vec, squid_vector), -1.0, 1.0)
             angle_rad = np.arccos(dot_product)
-            angle_deg = np.rad2deg(angle_rad)
+            angle_deg = np.rad2deg(angle_rad) - 90.0
             result_str += f"{name:<12}: {angle_deg:.2f} degrees\n"
         self.result_text.insert(tk.END, result_str)
 

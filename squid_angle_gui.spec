@@ -3,7 +3,7 @@ from PyInstaller.utils.hooks import collect_data_files
 
 block_cipher = None
 
-a = Analysis(['squid_angle_gui.py'],
+a = Analysis(['squid_angle_gui_enV1.1.py'],
              pathex=['.'],
              binaries=[],
              # collect_data_files('matplotlib') 会自动收集 matplotlib 运行所需的数据文件，

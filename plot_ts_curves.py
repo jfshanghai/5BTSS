@@ -112,8 +112,12 @@ def plot_ts_vs_tilt():
     plt.tight_layout(rect=[0, 0, 0.85, 1]) # Adjust layout to make room for legend
     
     output_filename = 'ts_vs_tilt_curves.png'
-    plt.savefig(output_filename)
-    print(f"Plot saved to '{output_filename}'")
+    # 修改：保存到 result/ 目录
+    RESULT_DIR = "result"
+    os.makedirs(RESULT_DIR, exist_ok=True)
+    save_path = os.path.join(RESULT_DIR, output_filename)
+    plt.savefig(save_path)
+    print(f"Plot saved to '{save_path}'")
     plt.show()
 
 

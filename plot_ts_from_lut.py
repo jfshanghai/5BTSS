@@ -79,8 +79,12 @@ def plot_ts_from_lut():
     plt.tight_layout()
     
     output_filename = 'ts_from_lut_plot.png'
-    plt.savefig(output_filename)
-    print(f"Plot saved to '{output_filename}'")
+    # 修改：保存到 result/ 目录
+    RESULT_DIR = "result"
+    os.makedirs(RESULT_DIR, exist_ok=True)
+    save_path = os.path.join(RESULT_DIR, output_filename)
+    plt.savefig(save_path)
+    print(f"Plot saved to '{save_path}'")
     plt.show()
 
 if __name__ == '__main__':

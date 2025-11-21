@@ -1,2 +1,5 @@
 NO1. 胴长19.4cm，体重132.2g
 NO2. 胴长17.9cm，体重137.6g
+g，1.029
+h，1.041
+Kang et al.,2006. Density and sound speed contrasts of the Japanese common squid Todarodes pacificus and their influence on acoustic target strength, Fisheries Science.

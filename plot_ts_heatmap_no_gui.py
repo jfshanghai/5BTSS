@@ -87,10 +87,14 @@ def generate_and_save_heatmap(lut_da, ts_ds, transducer_name):
     ax.grid(True, linestyle='--', alpha=0.6)
 
     # Save the figure
+    # 修改：保存到 result/ 目录
+    RESULT_DIR = "result"
+    os.makedirs(RESULT_DIR, exist_ok=True)
     output_filename = f'ts_heatmap_{transducer_name}.png'
-    fig.savefig(output_filename, dpi=150, bbox_inches='tight')
+    save_path = os.path.join(RESULT_DIR, output_filename)
+    fig.savefig(save_path, dpi=150, bbox_inches='tight')
     plt.close(fig) # Close the figure to free memory
-    print(f"Heatmap saved to {output_filename}\n")
+    print(f"Heatmap saved to {save_path}\n")
 
 
 def main():

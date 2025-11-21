@@ -156,7 +156,7 @@ if __name__ == '__main__':
     parser.add_argument('--yaw', type=float, default=45, help='True yaw angle to test (in degrees).')
     parser.add_argument('--tilt', type=float, default=-20, help='True tilt angle to test (in degrees).')
     parser.add_argument('--num-runs', type=int, default=100, help='Number of simulation runs.')
-    parser.add_argument('--csv-path', type=str, default='batch_results.csv', help='Path to save the output CSV file.')
+    parser.add_argument('--csv-path', type=str, default='result/batch_results.csv', help='Path to save the output CSV file.')
     parser.add_argument('--yaw-prior', type=float, nargs=2, default=None, metavar=('MIN', 'MAX'), help='The prior range for yaw angle (e.g., --yaw-prior 10 170).')
     parser.add_argument('--tilt-prior', type=float, nargs=2, default=None, metavar=('MIN', 'MAX'), help='The prior range for tilt angle (e.g., --tilt-prior 5 60).')
 

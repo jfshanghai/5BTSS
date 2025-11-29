@@ -54,6 +54,7 @@
 *   `plot_ts_curves.py`: 从插值后的TS数据文件（`.nc`）中读取数据，绘制TS随倾角（Tilt）变化的曲线图，并保存为 `ts_vs_tilt_curves.png`。
 *   `plot_ts_from_lut.py`: 演示如何使用 `incidence_angle_lut.nc` 和 `processed_squid_ts_fix.nc` 两个查找表，根据给定的鱿鱼姿态（Yaw/Tilt）查询对应的5个TS值，并绘制结果图，保存为 `ts_from_lut_plot.png`。
 *   `plot_ts_heatmap_no_gui.py`: 读取 `processed_squid_ts_fix.nc` 文件，为五个波束分别生成TS强度关于鱿鱼姿态（Yaw/Tilt）的热力图，并保存为PNG图片。
+*   `extract_center_freq_ts.py`: 从原始Excel数据中提取特定频率（70kHz和120kHz）的TS测量值，处理重复数据并导出为CSV文件到 `result` 目录，方便后续分析。
 
 ### 模型反演与分析
 *   `bayesian_solver.py`: 实现了基于贝叶斯方法的姿态反演模型。此版本采用**TS差异模型**，以消除体长对反演结果的影响。它包含完整的四个阶段：生成统计查找表、模拟观测、执行反演和可视化结果。
